@@ -1,15 +1,49 @@
-html {
+.App {
   display: grid;
-  grid-template-columns: 1fr 6fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr 5fr;
   text-decoration: none;
   width: 100vw;
   height: 100vh;
+  grid-template-areas: 
+    "a"
+    "b"
+  ;
 }
 
-.containter-navX{
-  background: blue;
+.nav{
+  grid-area: a;
+}
+
+.conteiner-page{
+  grid-area: b;
+}
+
+.container-nav-home{  
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-template-areas: 
+  "c d"
+  ;
+}
+
+.text-nav.title{
+  font-size: 2em;
+}
+
+.container-navDescription{
+  grid-area: c;
+  margin-left: 10px;
 }
 
 
+.container-opciones{
+  grid-area: d;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
 
+.item-nav{
+  margin: 15px;
+}

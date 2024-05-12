@@ -1,10 +1,12 @@
 import './App.css';
-import NavX from './pages/components/navX';
+
+import Home from './pages/Home'
 
 function App() {
   return (
     <div className="App">
-      <NavX/>
+      <Home/>
+      <div className='conteiner-page'>test</div>
     </div>
   );
 }
