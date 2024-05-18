@@ -7,12 +7,9 @@ import Navhome from './pages/components/NavHome';
 
 function App() {
   return (
-    <div className="App">
-        <section className='nav'>            
-          <Navhome/>            
-        </section>
-        
+    <div className="App">        
         <BrowserRouter>
+            <Navhome/>            
           <Routes>
               <Route path='/' element={<Home/>}/>
               <Route path='/listadoPokemon' element={<ListadoPokemon/>}/>
