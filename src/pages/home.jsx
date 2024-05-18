@@ -9,13 +9,21 @@ const OPCIONES={
     movimientos:"Movimientos"
 };
 
+const URLS={
+    pokedex:'/pokedex',
+    listadoTipos:'/listadoTipos',
+    listadoPokemon:'/listadoPokemon',
+    listadoMovimientos:'/listadoMovimientos'
+}
+
 export default function Home(){
-    return(
-        <>
-            <OpcionHome titulo={OPCIONES.pokedex} area="a"/>
-            <OpcionHome titulo={OPCIONES.lista} area="b"/>
-            <OpcionHome titulo={OPCIONES.tipos} area="c"/>
-            <OpcionHome titulo={OPCIONES.movimientos} area="d"/>
-        </>
+    return(        
+        
+        <div className='container-home'>
+            <OpcionHome url={URLS.pokedex} titulo={OPCIONES.pokedex} area="a"/>
+            <OpcionHome url={URLS.listadoPokemon} titulo={OPCIONES.lista} area="b"/>
+            <OpcionHome url={URLS.listadoTipos} titulo={OPCIONES.tipos} area="c"/>
+            <OpcionHome url={URLS.listadoMovimientos} titulo={OPCIONES.movimientos} area="d"/>
+        </div>        
     );
 }
