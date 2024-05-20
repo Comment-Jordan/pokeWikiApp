@@ -1,6 +1,7 @@
 
 export default function Navhome(){
     return(
+        // TODO Permitir la traduccion de idioma
         <section className='nav'>
             <section className='container-nav-home'>            
                 <section className='container-navDescription'>
