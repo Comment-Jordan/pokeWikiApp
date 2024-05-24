@@ -111,3 +111,53 @@ h1,h2{
   font-size: 3.5em;
   text-decoration: none;
 }
+
+.conteiner-page.coteiner-listado{
+  margin-top: 50px;
+}
+
+.coteiner-listado{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;  
+}
+
+.card-lista.card-tipo{  
+  border: solid 5px black;
+  border-radius: 20px;
+  background-color: black;
+  margin: 10px;
+  width: 40vw;
+  height: 20vh;
+  display: flex;
+}
+
+.card-tipo{
+  border: solid 5px black;
+  border-radius: 20px;
+  background-color: black;
+  margin: 10px;
+  display: flex;
+}
+
+.icono-tipo{
+  /* display: inline; */
+  /* width: 50%;
+  height: 50%; */
+  padding: 15px;
+}
+
+.card-lista>h1{
+  
+  color: white;
+  padding-left: 10%;
+  font-size: 5em;
+  height: fit-content;
+  margin: auto;
+}
+
+.card-lista.card-tipo>h1{
+  text-transform: capitalize;
+}
+
+

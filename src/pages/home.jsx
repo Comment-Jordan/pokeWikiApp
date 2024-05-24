@@ -1,5 +1,4 @@
 
-import Navhome from "./components/NavHome";
 import OpcionHome from "./components/OpcionHome"
 
 const OPCIONES={
