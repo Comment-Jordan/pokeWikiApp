@@ -1,4 +1,6 @@
 
+import { Link } from "react-router-dom";
+
 export default function Navhome(){
     return(
         // TODO Permitir la traduccion de idioma
@@ -9,10 +11,10 @@ export default function Navhome(){
                 </section>
                 
                 <section className='container-opciones'>
-                    <h2 className='text-nav item-nav'>Pokedex</h2>
-                    <h2 className='text-nav item-nav'>Movimientos</h2>
-                    <h2 className='text-nav item-nav'>Tipos</h2>
-                    <h2 className='text-nav item-nav'>Listado</h2>
+                    <Link to='/' className='text-nav item-nav'>Pokedex</Link>
+                    <Link to='/' className='text-nav item-nav'>Movimientos</Link>
+                    <Link to='/' className='text-nav item-nav'>Tipos</Link>
+                    <Link to='/listadoPokemon' className='text-nav item-nav'>Listado</Link>
                 </section>            
             </section>
         </section>
