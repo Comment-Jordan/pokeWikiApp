@@ -160,4 +160,8 @@ h1,h2{
   text-transform: capitalize;
 }
 
-
+.page-info-tipo{
+  display: flex;
+  margin: 5vw;
+  gap: 15px;
+}
