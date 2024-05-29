@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, matchPath } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
 import { colorTipo } from "../../utils/Diccionario";
 
 export default function CardTipo({ urlConsulta }){
     
+  let { idParams } = useParams();
   const [color, setColor] = useState({})
   const [cargando, setCargando] = useState(true)
   const [nombre, setNombre] = useState("")       
@@ -20,7 +22,7 @@ export default function CardTipo({ urlConsulta }){
         setNombre(data.name)
         setCargando(false)            
     });
-  }, []);
+  }, [idParams]);
 
   return (
     !cargando && (
