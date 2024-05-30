@@ -28,7 +28,7 @@ export default function CardTipo({ urlConsulta }){
     !cargando && (
       <article className='card-lista card-tipo' style={{ backgroundColor: color.backgroundColor }}>            
         <img src={require(`../../assets/icons/${nombre}.svg`)} alt='Tipo icono' className='icono-tipo'/>
-        <Link to={`/infoTipo/${id}`} className='text-nav item-nav'>{nombre}</Link>
+        <Link to={`/infoTipo/${id}`} className='text-card-tipo'>{nombre}</Link>
       </article>
     )
   );      

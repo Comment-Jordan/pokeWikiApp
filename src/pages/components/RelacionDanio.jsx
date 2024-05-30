@@ -34,12 +34,12 @@ export default function RelacionDanio({ datos }){
     } 
 
     return(
-        <article>            
+        <article className='conteiner-relacion-danio'>            
             {urlDobleDesventaja.length > 0 && (
                 <div>
                     <h1>Doble daño con: </h1>
                         {urlDobleDesventaja.map((item, index) => (
-                            <CardTipo urlConsulta={urlDobleDesventaja[index]} />
+                            <CardTipo key={index} urlConsulta={urlDobleDesventaja[index]} />
                             
                         ))}
                 </div>
@@ -49,7 +49,7 @@ export default function RelacionDanio({ datos }){
                 <div >
                     <h1>Doble efectividad con: </h1>
                         {urlDobleEfectividad.map((item, index) => (
-                            <CardTipo urlConsulta={urlDobleEfectividad[index]} />
+                            <CardTipo key={index} urlConsulta={urlDobleEfectividad[index]} />
                         ))}
                 </div>
             )}
@@ -58,7 +58,7 @@ export default function RelacionDanio({ datos }){
                 <div >
                     <h1>Doble daño con: </h1>
                         {urlMedioDanio.map((item, index) => (
-                            <CardTipo urlConsulta={urlMedioDanio[index]} />
+                            <CardTipo key={index} urlConsulta={urlMedioDanio[index]} />
                         ))}
                 </div>
             )}
@@ -67,7 +67,7 @@ export default function RelacionDanio({ datos }){
                 <div >
                     <h1>Resistencia: </h1>
                         {urlMedioDanio.map((item, index) => (
-                            <CardTipo urlConsulta={urlMedioDanio[index]} />
+                            <CardTipo key={index} urlConsulta={urlMedioDanio[index]} />
                         ))}
                 </div>
             )}
@@ -76,7 +76,7 @@ export default function RelacionDanio({ datos }){
                 <div >
                     <h1>Medio daño a: </h1>
                         {urlMedioEfectividad.map((item, index) => (
-                            <CardTipo urlConsulta={urlMedioEfectividad[index]} />
+                            <CardTipo key={index} urlConsulta={urlMedioEfectividad[index]} />
                         ))}
                 </div>
             )}
@@ -85,7 +85,7 @@ export default function RelacionDanio({ datos }){
                 <div >
                     <h1>Medio daño a: </h1>
                         {urlCeroEficiencia.map((item, index) => (
-                            <CardTipo urlConsulta={urlCeroEficiencia[index]} />
+                            <CardTipo key={index} urlConsulta={urlCeroEficiencia[index]} />
                         ))}
                 </div>
             )}
@@ -94,7 +94,7 @@ export default function RelacionDanio({ datos }){
                 <div >
                     <h1>Inmunidad: </h1>
                         {urlInmunidad.map((item, index) => (
-                            <CardTipo urlConsulta={urlInmunidad[index]} />
+                            <CardTipo key={index} urlConsulta={urlInmunidad[index]} />
                         ))}
                 </div>
             )}         

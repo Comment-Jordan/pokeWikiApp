@@ -113,7 +113,7 @@ h1,h2{
 }
 
 .conteiner-page.coteiner-listado{
-  margin-top: 50px;
+  margin-top: 50px;  
 }
 
 .coteiner-listado{
@@ -123,12 +123,12 @@ h1,h2{
 }
 
 .card-lista.card-tipo{  
-  border: solid 5px black;
-  border-radius: 20px;
-  background-color: black;
+  border: solid 3px black;
+  border-radius: 10px;
+  background-color: black;    
   margin: 10px;
-  width: 40vw;
-  height: 20vh;
+  width: 200px;
+  height: 50px;
   display: flex;
 }
 
@@ -161,16 +161,50 @@ h1,h2{
 }
 
 .page-info-tipo{
-  display: flex;
-  margin: 5vw;
+  padding-top: 10vh;
+  margin: 1em;
+  display: grid;
+  grid-template-areas: 
+  "g h";  
   gap: 15px;
 }
 
+.conteiner-img-tipo{
+  grid-area: g;
+}
+
+.conteiner-info-tipo{
+  grid-area: h;
+}
+
+.conteiner-img-tipo > img{
+  width: 20vw;
+  height: 40vh;
+}
+
 .conteiner-page.page-info-tipo > .icono-tipo{
-  height: 60vh;
+  height: 10%;
 }
 
 .card-tipo-individual{
   width: 30px;
   height: 20px;
+}
+
+.conteiner-relacion-danio{
+  display: flex;
+  width: 50%;
+  height: 50%;
+}
+
+.text-card-tipo{  
+  color: white;  
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 
+        -1px -1px 0 #000, 
+        1px -1px 0 #000, 
+        -1px 1px 0 #000, 
+        1px 1px 0 #000;
 }

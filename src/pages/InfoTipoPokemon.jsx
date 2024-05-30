@@ -31,8 +31,10 @@ export default function InfoTipoPokemon(){
     return(
         !cargando &&( 
             <article className='conteiner-page page-info-tipo'>
-                <img src={require(`../assets/icons/${nombre}.svg`)} alt='Tipo icono' className='icono-tipo' style={{ backgroundColor: color.backgroundColor }}/>
-                <aside>
+                <div className='conteiner-img-tipo'>
+                    <img src={require(`../assets/icons/${nombre}.svg`)} alt='Tipo icono' className='icono-tipo' style={{ backgroundColor: color.backgroundColor }}/>
+                </div>
+                <aside className='conteiner-info-tipo'>
                     <h1>Tipo {nombre}</h1>
                     <p>{descripcionTipo}</p>
                     {/* <h1>Clase de tipo de daño:</h1> */}
