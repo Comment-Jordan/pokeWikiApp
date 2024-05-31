@@ -208,3 +208,42 @@ h1,h2{
         -1px 1px 0 #000, 
         1px 1px 0 #000;
 }
+
+.container-page.conteiner-listado-pokemon{
+  display: grid;
+  grid-template-areas: "a b c d f";
+  gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.card-pokemon{
+  box-sizing: border-box;
+  border: 3px solid black;
+  text-transform: uppercase;
+  display: grid;
+  grid-template-areas: 
+  "a"
+  "b"
+  "c"
+  ;
+}
+
+.id-card-pokemon{
+  grid-area: a;
+  display: flex;
+  justify-content: end;
+  padding: 0px 10% 0px 0px;
+}
+
+.imagen-card-pokemon{
+  grid-area: b;
+  display: flex;
+  justify-content: center;    
+}
+
+.nombre-card-pokemon{
+  grid-area: c;
+  display: flex;
+  justify-content: center;
+}

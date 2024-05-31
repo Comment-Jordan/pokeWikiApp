@@ -10,7 +10,7 @@ const OPCIONES={
 
 const URLS={
     pokedex:'/pokedex',
-    listadoTipos:'/listadoTipos',
+    listadoTipos:'/infoTipo',
     listadoPokemon:'/listadoPokemon',
     listadoMovimientos:'/listadoMovimientos'
 }

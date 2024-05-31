@@ -4,7 +4,7 @@ import { get } from "../JS/Get";
 import Cargando from "./components/Modals/Cargando";
 import CardTipo from "./components/CardTipo";
 
-export default function ListadoPokemon(){   
+export default function ListadoTipos(){   
     const [cargando, setCargando]= useState(true)
     const [consultaTiposPokemon, setConsultaTiposPokemon]=useState({})
     const [urlTipos, setUrlTipos]=useState([])
