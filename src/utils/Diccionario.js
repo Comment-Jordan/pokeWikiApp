@@ -78,6 +78,10 @@ export const colorTipo = {
     10001: {
         name: "unknown",
         color: "FFFFFF" //Black
+    },
+    10002: {
+        name: "unknown",
+        color: "FFFFFF" //Black
     }
 };
 

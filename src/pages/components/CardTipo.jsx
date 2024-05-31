@@ -16,7 +16,7 @@ export default function CardTipo({ urlConsulta }){
     fetch(urlConsulta)
       .then(response => response.json())
       .then(data => {
-        // console.log(data);
+        console.log(data);
         setId(data.id)
         setColor({ backgroundColor: colorTipo[data.id].color });            
         setNombre(data.name)
