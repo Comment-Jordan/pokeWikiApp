@@ -160,6 +160,9 @@ h1,h2{
   text-transform: capitalize;
 }
 
+.conteiner-info-tipo>h1{
+  text-transform: uppercase;
+}
 .page-info-tipo{
   padding-top: 10vh;
   margin: 1em;

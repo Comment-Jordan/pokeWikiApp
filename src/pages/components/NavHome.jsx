@@ -10,7 +10,7 @@ export default function Navhome(){
                 </section>
                 
                 <section className='container-opciones'>
-                    <Link to='/' className='text-nav item-nav'>Pokedex</Link>
+                    <Link to='/infoPokemon/1' className='text-nav item-nav'>Pokedex</Link>
                     <Link to='/listadoPokemon' className='text-nav item-nav'>Listado</Link>
                     <Link to='/' className='text-nav item-nav'>Movimientos</Link>
                     <Link to='/infoTipo' className='text-nav item-nav'>Tipos</Link>

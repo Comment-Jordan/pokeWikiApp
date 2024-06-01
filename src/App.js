@@ -6,6 +6,7 @@ import ListadoPokemon from './pages/ListaPokemon';
 import Navhome from './pages/components/NavHome';
 import InfoTipoPokemon from './pages/InfoTipoPokemon';
 import ListadoTipos from './pages/ListaTipos';
+import InfoPokemon from './pages/InfoPokemon';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Navhome/>            
           <Routes>
               <Route path='/' element={<Home/>}/>
+              <Route path='/infoPokemon/:id' element={<InfoPokemon/>}/>
               <Route path='/listadoPokemon' element={<ListadoPokemon/>}/>
               <Route path='/infoTipo' element={<ListadoTipos/>}/>
               <Route path='/infoTipoPokemon/:id' element={<InfoTipoPokemon/>}/>
