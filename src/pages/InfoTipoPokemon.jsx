@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom';
 import { colorTipo } from '../utils/Diccionario';
 import { DEFINICION_TIPOS } from '../utils/Diccionario';
 import RelacionDanio from './components/RelacionDanio';
-import { ConstantNodeDependencies } from 'mathjs';
 
 export default function InfoTipoPokemon(){
     let { id } = useParams();

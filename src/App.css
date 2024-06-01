@@ -250,3 +250,38 @@ h1,h2{
   display: flex;
   justify-content: center;
 }
+
+.conteiner-info-pokemon{
+  display: grid;
+  grid-template-areas: 
+  "a b"
+  "a b"
+  "a b"
+  "a b"
+  "c c"
+  ;
+  margin: 1.8em;
+}
+
+.item-info-pokemon.resources{
+  grid-area: a;
+}
+
+.item-info-pokemon.info{
+  grid-area: b;  
+}
+
+.container-botones-info-pokemon{
+  grid-area: c;
+  display: flex;
+  justify-content: center;
+  gap: 2.8em;
+}
+
+.item-info-pokemon.info-pokemon-resources{
+  
+}
+
+.info-pokemon-descripcion{
+  text-transform: uppercase;
+}

@@ -9,7 +9,7 @@ const OPCIONES={
 };
 
 const URLS={
-    pokedex:'/pokedex',
+    pokedex:'/infoPokemon/1',
     listadoTipos:'/infoTipo',
     listadoPokemon:'/listadoPokemon',
     listadoMovimientos:'/listadoMovimientos'
