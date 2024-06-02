@@ -267,8 +267,13 @@ h1,h2{
   grid-area: a;
 }
 
-.item-info-pokemon.info{
+.item-info-pokemon-info{
   grid-area: b;  
+}
+
+.grafico-info-pokemon{
+  width: 25em;
+  height: 25em;
 }
 
 .container-botones-info-pokemon{

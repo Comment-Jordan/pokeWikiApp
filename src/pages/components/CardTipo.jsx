@@ -7,30 +7,29 @@ import InfoTipoPokemon from "../InfoTipoPokemon";
 
 export default function CardTipo({ urlConsulta }){
     
-  let { idParams } = useParams();
+  let { id } = useParams();
   const [color, setColor] = useState({})
   const [cargando, setCargando] = useState(true)
   const [nombre, setNombre] = useState("")       
-  const [id, setId] = useState(0);
+  const [idPokemon, setIdPokemon] = useState(0);
 
   useEffect(() => {
     fetch(urlConsulta)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        setId(data.id)
-        setColor({ backgroundColor: colorTipo[data.id].color });            
-        setNombre(data.name)
-        setCargando(false)            
+    .then(response => response.json())
+    .then(data => {
+      // console.log(data);
+      setIdPokemon(data.id)
+      setColor({ backgroundColor: colorTipo[data.id].color });            
+      setNombre(data.name)
+      setCargando(false)            
     });
-  }, [idParams]);
+  }, [id]);
 
-  return (
-    !cargando && (
-      <article className='card-lista card-tipo' style={{ backgroundColor: color.backgroundColor }}>            
-        <img src={require(`../../assets/icons/${nombre}.svg`)} alt='Tipo icono' className='icono-tipo'/>
-        <Link to={`/infoTipoPokemon/${id}`} className='text-card-tipo'>{nombre}</Link>
-      </article>
-    )
-  );      
+  if(cargando){return <h1>Cargando.......</h1>}  
+  return (        
+    <article className='card-lista card-tipo' style={{ backgroundColor: color.backgroundColor }}>            
+      <img src={require(`../../assets/icons/${nombre}.svg`)} alt='Tipo icono' className='icono-tipo'/>
+      <Link to={`/infoTipoPokemon/${idPokemon}`} className='text-card-tipo'>{nombre}</Link>
+    </article>      
+  );        
 }

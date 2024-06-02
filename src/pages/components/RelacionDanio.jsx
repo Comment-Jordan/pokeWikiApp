@@ -2,7 +2,6 @@
 import CardTipo from "./CardTipo";
 
 export default function RelacionDanio({ datos }){
-
     let urlDobleDesventaja=[];
     for(let i=0; i<datos.double_damage_from.length;i++){
         urlDobleDesventaja.push(datos.double_damage_from[i].url);
@@ -63,18 +62,9 @@ export default function RelacionDanio({ datos }){
                 </div>
             )}
             
-            {urlMedioDanio.length > 0 && (
-                <div >
-                    <h1>Resistencia: </h1>
-                        {urlMedioDanio.map((item, index) => (
-                            <CardTipo key={index} urlConsulta={urlMedioDanio[index]} />
-                        ))}
-                </div>
-            )}
-
             {urlMedioEfectividad.length > 0 && (
                 <div >
-                    <h1>Medio daño a: </h1>
+                    <h1>Resistencia: </h1>
                         {urlMedioEfectividad.map((item, index) => (
                             <CardTipo key={index} urlConsulta={urlMedioEfectividad[index]} />
                         ))}
