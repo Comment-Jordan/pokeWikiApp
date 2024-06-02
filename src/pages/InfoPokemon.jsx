@@ -2,7 +2,10 @@
 import { to } from "mathjs";
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate  } from "react-router-dom";
+import { Radar } from 'react-chartjs-2';
 
+
+import GraficoStats from "./components/GraficoStats";
 import { MAX_POKEMON } from "../utils/Globals";
 
 export default function InfoPokemon(){
@@ -11,6 +14,7 @@ export default function InfoPokemon(){
     const [cargando, setCargando] = useState(true)
     const [infoConsulta, setInfoConsulta] = useState({})
     const [idPokemon, setIdPokemon] = useState(id)
+    const [stats, setStats] = useState([])
     const [totalPokemon, setTotalPokemon] = useState(MAX_POKEMON)
     
     const siguiente = () => {
@@ -39,7 +43,11 @@ export default function InfoPokemon(){
         fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
+            let arrayStats=[];
+            for(let i=0;i<data.stats.length;i++){
+                arrayStats.push(data.stats[i].base_stat);
+            }
+            setStats(arrayStats)
             setInfoConsulta(data)
             setCargando(false)
         });
@@ -54,6 +62,7 @@ export default function InfoPokemon(){
                 <h3 className='info-pokemon-descripcion'>{infoConsulta.name}</h3>
             </article>
             <article className='item-info-pokemon-info'>
+                <GraficoStats data={stats}/>
             </article>
             <div className='container-botones-info-pokemon'>
                 <button type='button' onClick={anterior}>Anterior</button>                
