@@ -72,17 +72,18 @@ export default function InfoPokemon(){
                 ))}
             </article>
             <article className='item-info-pokemon-info'>
-                <h3 className='info-pokemon-descripcion'>{infoConsulta.name}</h3>                
+                <h3 className='info-pokemon-descripcion'>{infoConsulta.name} #{infoConsulta.id}</h3>
+                <hr/>
                 <div className='descripcion-info-pokemon'>
-                    <h1>test</h1>                                     
+                    <h1>Stats Base</h1>
                 </div>
                 <div className='grafico-info-pokemon'>
                     <GraficoStats data={stats}/>
                 </div>
             </article>
             <div className='container-botones-info-pokemon'>
-                <button type='button' onClick={anterior}>Anterior</button>                
-                <button type='button' onClick={siguiente}>Siguiente</button>                
+                <button className='arrow-info-pokemon' type="button" onClick={anterior}>◄</button>
+                <button className='arrow-info-pokemon' type='button' onClick={siguiente}>►</button>                
             </div>            
         </article>        
     );

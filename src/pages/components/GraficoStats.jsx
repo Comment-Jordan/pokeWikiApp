@@ -18,7 +18,7 @@ export default function GraficoStats({ data }){
     labels: ['HP', 'Ataque', 'Defensa', 'Ataque Especial', 'Defensa Especial', 'Velocidad'],
     datasets: [
       {
-        label: "Stats",
+        label: "IV",
         data: data,
         backgroundColor: 'rgba(255, 99, 132, 0.2)',
         borderColor: 'rgba(255, 99, 132, 1)',
