@@ -263,8 +263,8 @@ h1,h2{
   margin: 1.8em;
 }
 
-.item-info-pokemon.resources{
-  grid-area: a;
+.item-info-pokemon.info-pokemon-resources{
+  grid-area: a;  
 }
 
 .item-info-pokemon-info{
@@ -281,10 +281,6 @@ h1,h2{
   display: flex;
   justify-content: center;
   gap: 2.8em;
-}
-
-.item-info-pokemon.info-pokemon-resources{
-  
 }
 
 .info-pokemon-descripcion{
@@ -304,6 +300,21 @@ h1,h2{
   width: 2em;
   padding: 0.1em;
 }
+
 .arrow-info-pokemon:hover{
   background: #265680;
+}
+
+.conteiner-imagen-info-pokemon{
+  max-width: 50%;
+  max-height: 50%;
+  background: #577B8D;
+}
+
+.opcion-seleccionada{
+  font-size: 2em;
+  box-sizing: border-box;
+  border: solid black 0.01em;
+  outline: none;
+  cursor: pointer;
 }
