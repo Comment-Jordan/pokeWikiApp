@@ -18,7 +18,7 @@ export default function ListadoPokemon(){
             setInfoConsulta(data.results)
             setCargando(false)
         });        
-    },[primeroMostrar]);
+    },[primeroMostrar])
 
     if(cargando){return <h1>Cargando.......</h1>}
 

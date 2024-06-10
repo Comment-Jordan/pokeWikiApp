@@ -21,7 +21,6 @@ export default function InfoPokemon(){
     const [frontSpriteDefault, setFrontSpriteDefault] = useState(``)
     const [backSpriteShiny, setBackSpriteShiny] = useState(``)
     const [frontSpriteShiny, setFrontSpriteShiny] = useState(``)
-
     const [mostrarFrente, setMostrarFrente] = useState(true)
     const [shinySelected, setShinySelected] = useState(false)    
 
@@ -78,8 +77,13 @@ export default function InfoPokemon(){
             setFrontSpriteDefault(data.sprites.front_default)
             setBackSpriteShiny(data.sprites.back_shiny)
             setFrontSpriteShiny(data.sprites.front_shiny)
-            setCargando(false)
-        });
+            setShinySelected(false)
+            setMostrarFrente(true)
+            })
+            .catch(error => {
+                console.error("Error fetching data: ", error);
+            })
+            .finally(() => setCargando(false));
     }, [id]);
 
     const estilosBotonFrente = {

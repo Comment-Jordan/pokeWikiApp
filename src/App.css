@@ -318,3 +318,59 @@ h1,h2{
   outline: none;
   cursor: pointer;
 }
+
+.conteiner-movs{
+  display: grid;
+  grid-template-areas: "a b c d e";
+  gap: 0.8em;
+}
+
+.card-mov{
+  border: solid black 2px;
+}
+
+.titulo-description{
+  display: flex;
+  box-sizing: border-box;  
+  text-transform: uppercase;
+  justify-content: center;
+  margin: 0em 0em 0.5em 0em;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.id-mov{
+  display: flex;
+  justify-content: end;
+  margin: 0.2em 0.2em 0em 0em;
+  padding: 0;
+}
+
+.descripcion-mov>h3{
+  text-transform: capitalize;
+}
+
+.conteiner-info-move{
+  display: grid;
+  grid-template-areas: 
+  "a b"  
+  "c c"
+  ;
+  margin: auto;
+  gap: 10em;
+  border: solid black 0.5em;
+  padding: 1em;
+}
+
+.item-desc-mov.resourses-move{
+  grid-area: a;
+}
+
+.item-desc-mov.descripcion-mov{
+  grid-area: b;
+}
+
+.container-botones-info-pokemon.item-bottoms-move{
+  grid-area: c;
+}

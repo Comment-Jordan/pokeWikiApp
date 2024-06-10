@@ -25,11 +25,12 @@ export default function CardTipo({ urlConsulta }){
     });
   }, [id]);
 
-  if(cargando){return <h1>Cargando.......</h1>}  
-  return (        
-    <article className='card-lista card-tipo' style={{ backgroundColor: color.backgroundColor }}>            
-      <img src={require(`../../assets/icons/${nombre}.svg`)} alt='Tipo icono' className='icono-tipo'/>
-      <Link to={`/infoTipoPokemon/${idPokemon}`} className='text-card-tipo'>{nombre}</Link>
-    </article>      
-  );        
+  if(!cargando){
+    return (        
+      <article className='card-lista card-tipo' style={{ backgroundColor: color.backgroundColor }}>            
+        <img src={require(`../../assets/icons/${nombre}.svg`)} alt='Tipo icono' className='icono-tipo'/>
+        <Link to={`/infoTipoPokemon/${idPokemon}`} className='text-card-tipo'>{nombre}</Link>
+      </article>      
+    );        
+  }
 }
