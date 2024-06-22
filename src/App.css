@@ -43,7 +43,7 @@ h1,h2{
   margin: 5% 0 0 5%;
   font-size: 2.5em;
   height: fit-content;
-  cursor: pointer;
+  cursor: pointer;  
 }
 
 .container-navDescription{
@@ -67,6 +67,9 @@ h1,h2{
   cursor: pointer;
   text-decoration: none;
   transition: border-bottom 0.1s ease;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
 }
 .text-nav.item-nav:hover{
   /* box-sizing: border-box; */
@@ -308,7 +311,11 @@ h1,h2{
 .conteiner-imagen-info-pokemon{
   max-width: 50%;
   max-height: 50%;
-  background: #577B8D;
+  /* background: #577B8D; */
+  border: solid black 3px;
+  padding: 0.5em 0em 1em 0.5em;
+  display: flex;
+  justify-content: space-around;
 }
 
 .opcion-seleccionada{
@@ -374,3 +381,30 @@ h1,h2{
 .container-botones-info-pokemon.item-bottoms-move{
   grid-area: c;
 }
+
+.conteiner-botones-desplazamiento{
+  display: flex;
+  gap: 0.5em;
+}
+
+.boton-desplazamiento{
+  background: #577B8D;
+}
+
+.boton-desplazamiento:hover{
+  background: #265680;
+}
+
+.text-nav.logo{
+  margin-top: 1em;
+  margin-left: 0.5em;
+  font-size: 2em;
+  font-family: "absender1", "Helvetica Neue", Helvetica, sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+/* .conteneiner-info-details{
+  display: flex;
+  justify-content: center;
+} */

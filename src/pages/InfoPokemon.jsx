@@ -61,7 +61,7 @@ export default function InfoPokemon(){
         fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
+            // console.log(data);
             let arrayStats=[];
             let urlConsulta=[];
             for(let i=0;i<data.stats.length;i++){
@@ -87,11 +87,11 @@ export default function InfoPokemon(){
     }, [id]);
 
     const estilosBotonFrente = {
-        background: !mostrarFrente?'white':'#577B8D'
+        background: !mostrarFrente?'#0079FF':'white'
     };
 
     const estilosBotonRareza = {
-        background: shinySelected?'#ffd700':'#577B8D'
+        background: shinySelected?'#ffd700':'white'
     };
 
       
@@ -99,38 +99,41 @@ export default function InfoPokemon(){
     return(
         <article className='conteiner-page conteiner-info-pokemon'>
             <article className='item-info-pokemon info-pokemon-resources'>
-                <div className='conteiner-imagen-info-pokemon'>
-                    <img id='tagSprite' src={POSICONES['default']['frente']}/>
-                    <a style={estilosBotonFrente}className='opcion-seleccionada' onClick={() => {
-                        const imagen = document.getElementById('tagSprite');
-                        const shiny= shinySelected?'shiny':'default';
-                        const posicion= mostrarFrente? 'espalda': 'frente';
-                        imagen.src=POSICONES[shiny][posicion];
+                <div className='conteneiner-info-details'>
+                    <div className='conteiner-imagen-info-pokemon'>
+                        <img id='tagSprite' src={POSICONES['default']['frente']}/>
+                        <div>
+                            <button style={estilosBotonFrente}className='opcion-seleccionada' onClick={() => {
+                                const imagen = document.getElementById('tagSprite');
+                                const shiny= shinySelected?'shiny':'default';
+                                const posicion= mostrarFrente? 'espalda': 'frente';
+                                imagen.src=POSICONES[shiny][posicion];
 
-                        //Alternar la posicion
-                        const cambioPosicion=!mostrarFrente;
-                        setMostrarFrente(cambioPosicion);                        
-                    }}>
-                        🗘
-                    </a>
+                                //Alternar la posicion
+                                const cambioPosicion=!mostrarFrente;
+                                setMostrarFrente(cambioPosicion);                        
+                            }}>
+                                🗘
+                            </button>
+                            <button style={estilosBotonRareza}className='opcion-seleccionada' onClick={() => {
+                                const imagen = document.getElementById('tagSprite');                        
+                                const rareza= shinySelected?'default':'shiny';
+                                const posicion= mostrarFrente? 'frente': 'espalda';
+                                imagen.src=POSICONES[rareza][posicion];
 
-                    <a style={estilosBotonRareza}className='opcion-seleccionada' onClick={() => {
-                        const imagen = document.getElementById('tagSprite');                        
-                        const rareza= shinySelected?'default':'shiny';
-                        const posicion= mostrarFrente? 'frente': 'espalda';
-                        imagen.src=POSICONES[rareza][posicion];
-
-                        //Alternar la rareza
-                        const cambioRareza=!shinySelected;
-                        setShinySelected(cambioRareza);                   
-                    }}>
-                        ★
-                    </a>
-                
+                                //Alternar la rareza
+                                const cambioRareza=!shinySelected;
+                                setShinySelected(cambioRareza);                   
+                            }}>
+                                ★
+                            </button>
+                        </div>
+                    
+                    </div>
+                    {urlTipos.map((item,index)=>(
+                        <CardTipo key={index} urlConsulta={item}/>
+                    ))}
                 </div>
-                {urlTipos.map((item,index)=>(
-                    <CardTipo key={index} urlConsulta={item}/>
-                ))}
             </article>
             <article className='item-info-pokemon-info'>
                 <h3 className='info-pokemon-descripcion'>{infoConsulta.name} #{infoConsulta.id}</h3>

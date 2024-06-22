@@ -38,7 +38,7 @@ export default function InfoMovimiento(){
             .then(response => response.json())
             .then(datos => {
                 setInfoConsulta(datos)
-                console.log(datos);
+                // console.log(datos);
             })
             .catch(error => {
                 console.error("Error fetching data: ", error);

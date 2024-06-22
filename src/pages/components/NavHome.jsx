@@ -7,7 +7,7 @@ export default function Navhome(){
             <section className='container-nav-home'>            
                 <section className='container-navDescription'>
                     {/* <h1 className='text-nav title'>POKE APP 2</h1> */}
-                    <Link to='/' className='text-nav item-nav'>POKE APP 2</Link>
+                    <Link to='/' className='text-nav logo'>POKE APP 2</Link>
                 </section>
                 
                 <section className='container-opciones'>

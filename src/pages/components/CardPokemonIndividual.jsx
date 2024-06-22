@@ -16,7 +16,7 @@ export default function CardPokemonIndividual({ datosPokemon }){
         fetch(datosPokemon.url)
         .then(response=> response.json())
         .then(data=>{            
-            console.log(data);
+            // console.log(data);
             let urlConsulta=[];
             setImagen(data.sprites.front_default)
             setName(data.name)
