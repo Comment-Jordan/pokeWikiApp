@@ -6,13 +6,16 @@ import BotonesDesplazamiento from "./components/BotonesDesplazamiento.jsx";
 export default function ListadoPokemon(){
     
     const [numeroPorConsulta, setNumeroPorConsulta] = useState(25)
-    const[primeroMostrar, setPrimeroMostrar] = useState(1)
+    const[primeroMostrar, setPrimeroMostrar] = useState(0)
     const[ultimoMostrar, setUltimoMostrar] = useState(numeroPorConsulta)
     const [infoConsulta, setInfoConsulta] = useState([])
     const [cargando, setCargando] = useState(true)    
 
     const anterior = () => {
-        setPrimeroMostrar(prevPrimeroMostrar => prevPrimeroMostrar - numeroPorConsulta);
+        const nuevoPrimero=primeroMostrar-numeroPorConsulta;
+        // const nuevoUltimo= ultimoMostrar-numeroPorConsulta;
+        setPrimeroMostrar(nuevoPrimero);
+        // setUltimoMostrar(nuevoUltimo)
     };
     
 
@@ -22,27 +25,30 @@ export default function ListadoPokemon(){
     
 
     const siguiente = () => {
-        setPrimeroMostrar(prevPrimeroMostrar => prevPrimeroMostrar + numeroPorConsulta);
+        const nuevoPrimero=primeroMostrar+numeroPorConsulta;
+        // const nuevoUltimo= ultimoMostrar+numeroPorConsulta;
+        setPrimeroMostrar(nuevoPrimero);
+        // setUltimoMostrar(nuevoUltimo)
     };
     
 
     useEffect(() => {
-        setCargando(true)   
-        fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${primeroMostrar}&limit=${ultimoMostrar*numeroPorConsulta}`)
+        setCargando(true)
+        fetch(`https://pokeapi.co/api/v2/pokemon/?offset=${primeroMostrar}&limit=${numeroPorConsulta}`)
         .then(response=> response.json())
         .then(data=>{            
-            console.log(data);
+            console.log(data);            
             setInfoConsulta(data.results)
             setCargando(false)
         });        
-    },[primeroMostrar])
+    },[primeroMostrar, ultimoMostrar])
 
     if(cargando){return <h1>Cargando.......</h1>}
 
     return(
         <article className='container-page conteiner-listado-pokemon'>
             <BotonesDesplazamiento funcAnterior={anterior} funcInicio={inicio} funcSiguiente={siguiente}/>
-            {infoConsulta.map((jsonInfo, index) => (
+            {infoConsulta.map((jsonInfo, index) => (                
                 <CardPokemonIndividual key={index} datosPokemon={jsonInfo} />
             ))}
         </article>
