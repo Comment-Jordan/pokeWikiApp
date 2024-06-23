@@ -17,7 +17,7 @@ export default function ListadoPokemon(){
     
 
     const inicio = () => {
-        setPrimeroMostrar(1);
+        setPrimeroMostrar(0);
     };
     
 
