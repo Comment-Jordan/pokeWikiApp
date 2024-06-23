@@ -15,7 +15,7 @@ export default function ListadoMovimientos(){
     };
 
     const inicio = () => {
-        setPrimeroMostrar(1);
+        setPrimeroMostrar(0);
     };
     
     const siguiente = () => {
