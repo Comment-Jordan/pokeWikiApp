@@ -217,10 +217,25 @@ h1,h2{
 
 .container-page.conteiner-listado-pokemon{
   display: grid;
-  grid-template-areas: "a b c d f";
+  grid-template-areas: 
+  "botones"
+  "listado";
   gap: 10px;
   margin-top: 30px;
   margin-bottom: 50px;
+}
+
+.grid-botones-desplazamiento{
+  grid-area: botones;
+  display: flex;
+  justify-content: center;  
+}
+
+.grid-listado{
+  grid-area: listado;
+  display: grid;
+  grid-template-areas: "a b c d e";
+  gap: 10px;
 }
 
 .card-pokemon{
@@ -384,15 +399,17 @@ h1,h2{
 
 .conteiner-botones-desplazamiento{
   display: flex;
-  gap: 0.5em;
+  gap: 1em;
 }
 
 .boton-desplazamiento{
-  background: #577B8D;
+  cursor: pointer;
+  background: white;
 }
 
 .boton-desplazamiento:hover{
-  background: #265680;
+  background: #6895D2;
+  color: white;
 }
 
 .text-nav.logo{

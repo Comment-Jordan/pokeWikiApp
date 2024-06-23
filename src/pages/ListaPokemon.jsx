@@ -47,10 +47,14 @@ export default function ListadoPokemon(){
 
     return(
         <article className='container-page conteiner-listado-pokemon'>
-            <BotonesDesplazamiento funcAnterior={anterior} funcInicio={inicio} funcSiguiente={siguiente}/>
-            {infoConsulta.map((jsonInfo, index) => (                
-                <CardPokemonIndividual key={index} datosPokemon={jsonInfo} />
-            ))}
+            <div className='grid-botones-desplazamiento'>
+                <BotonesDesplazamiento funcAnterior={anterior} funcInicio={inicio} funcSiguiente={siguiente}/>
+            </div>
+            <div className='grid-listado'>
+                {infoConsulta.map((jsonInfo, index) => (                
+                    <CardPokemonIndividual key={index} datosPokemon={jsonInfo} />
+                ))}
+            </div>
         </article>
     );
 }
