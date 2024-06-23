@@ -7,15 +7,12 @@ export default function ListadoPokemon(){
     
     const [numeroPorConsulta, setNumeroPorConsulta] = useState(25)
     const[primeroMostrar, setPrimeroMostrar] = useState(0)
-    const[ultimoMostrar, setUltimoMostrar] = useState(numeroPorConsulta)
     const [infoConsulta, setInfoConsulta] = useState([])
     const [cargando, setCargando] = useState(true)    
 
     const anterior = () => {
         const nuevoPrimero=primeroMostrar-numeroPorConsulta;
-        // const nuevoUltimo= ultimoMostrar-numeroPorConsulta;
         setPrimeroMostrar(nuevoPrimero);
-        // setUltimoMostrar(nuevoUltimo)
     };
     
 
@@ -26,9 +23,7 @@ export default function ListadoPokemon(){
 
     const siguiente = () => {
         const nuevoPrimero=primeroMostrar+numeroPorConsulta;
-        // const nuevoUltimo= ultimoMostrar+numeroPorConsulta;
         setPrimeroMostrar(nuevoPrimero);
-        // setUltimoMostrar(nuevoUltimo)
     };
     
 
@@ -41,7 +36,7 @@ export default function ListadoPokemon(){
             setInfoConsulta(data.results)
             setCargando(false)
         });        
-    },[primeroMostrar, ultimoMostrar])
+    },[primeroMostrar])
 
     if(cargando){return <h1>Cargando.......</h1>}
 

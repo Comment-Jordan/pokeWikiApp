@@ -1,7 +1,7 @@
 export const colorTipo = {
     1: {
         name: "normal",
-        color: "#E6E6FA" // Lavender
+        color: "#E2DFD0" // #E2DFD0
     },
     2: {
         name: "fighting",
@@ -37,7 +37,7 @@ export const colorTipo = {
     },
     10: {
         name: "fire",
-        color: "#DC143C" // Crimson
+        color: "#D80032" // #D80032
     },
     11: {
         name: "water",
@@ -45,11 +45,11 @@ export const colorTipo = {
     },
     12: {
         name: "grass",
-        color: "#00FF00" // Lime
+        color: "#9BEC00" // #9BEC00
     },
     13: {
         name: "electric",
-        color: "#FFFF00" // Yellow
+        color: "#FFC700" // #FFF455
     },
     14: {
         name: "psychic",

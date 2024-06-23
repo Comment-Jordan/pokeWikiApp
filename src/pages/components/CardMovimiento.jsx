@@ -12,21 +12,23 @@ export default function CardMovimiento( {urlMovimiento} ){
 
 
     useEffect(()=>{
+        setCargando(true)
         fetch(urlMovimiento)
         .then(response => response.json())
         .then(data => {
             setNombre(data.name)
             setIdMovimiento(data.id)
         })
-        .finally(setCargando(false))
-    },[])
+        .finally(()=>{setCargando(false)})
+    },[urlMovimiento])
 
-    if(cargando) {return null}
-    return(
-        <div className='card-mov'>
-            <p className='id-mov'>#{idMovimiento}</p>
-            <img src={MT}/>
-            <Link to={`/infoMovimiento/${idMovimiento}`} className='titulo-description'>{nombre}</Link>            
-        </div>
-    );
+    if(!cargando){
+        return(
+            <div className='card-mov'>
+                <p className='id-mov'>#{idMovimiento}</p>
+                <img src={MT}/>
+                <Link to={`/infoMovimiento/${idMovimiento}`} className='titulo-description'>{nombre}</Link>            
+            </div>
+        );
+    }
 }
